@@ -4,25 +4,24 @@ call pathogen#runtime_append_all_bundles()
 " some general options
 set nocompatible
 set ignorecase
-set hidden          " let buffers go unsaved in background
-syn on              " syntax highlighting
-set backspace=indent,eol,start "delete indiscriminately
-set incsearch       " highlight 1st match while searching
-set hlsearch        " highlight all search matches
-set shiftwidth=2
-set tabstop=2       " tab width is 2 chars
-set expandtab       " use spaces instead of tabs
+set hidden                     " let buffers go unsaved in background
+set incsearch                  " highlight 1st match while searching
+set hlsearch                   " highlight all search matches
+set expandtab                  " use spaces instead of tabs
 set autoindent
-set showcmd         " show incomplete commands
-set wildmenu        " autocomplete menu for command-line options
+set showcmd                    " show incomplete commands
+set wildmenu                   " autocomplete menu for command-line options
 set noerrorbells
+set spell                      " spellcheck on
 set laststatus=2
+set shiftwidth=2
+set tabstop=2                  " tab width is 2 chars
 set shortmess=at
-"set number          " display line numbers
-"set numberwidth=2
-set spell           " spellcheck on
+set directory=/tmp             " set swapfile directory to tmp
+set backspace=indent,eol,start "delete indiscriminately
 set viminfo=%,'50,\"100,:100,n~/.viminfo
 set statusline=%f\ %m%r%y\ %l/%L
+syn on                         " syntax highlighting
 
 if !exists("&gui_running")
   if $TERM == 'xterm-256color'
@@ -33,9 +32,6 @@ if !exists("&gui_running")
     colorscheme satori
   end
 endif
-
-" set swapfile directory to tmp
-set directory=/tmp
 
 " Enable filetype-specific indenting and plugins
 filetype off
@@ -51,9 +47,6 @@ map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 " remap autocomplete
 inoremap <C-Space> <C-p>
 inoremap <Nul> <C-p>
-
-" command return inserts a new line after the current one
-imap <D-CR> <C-o>o
 
 " xml.vim
 let xml_use_xhtml = 1
