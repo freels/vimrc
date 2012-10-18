@@ -26,7 +26,7 @@ syn on                         " syntax highlighting
 if !exists("&gui_running")
   if $TERM == 'xterm-256color'
     set t_Co=256
-    colorscheme inkpot
+    colorscheme grb256
   else
     set nospell
     colorscheme satori
