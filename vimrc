@@ -1,5 +1,5 @@
 " add namespaced bundle paths in ~/.vim/bundles to the load path
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " some general options
 set nocompatible
