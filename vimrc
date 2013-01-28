@@ -12,7 +12,7 @@ set autoindent
 set showcmd                    " show incomplete commands
 set wildmenu                   " autocomplete menu for command-line options
 set noerrorbells
-set spell                      " spellcheck on
+" set spell                      " spellcheck on
 set laststatus=2
 set shiftwidth=2
 set tabstop=2                  " tab width is 2 chars
